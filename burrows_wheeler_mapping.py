@@ -214,9 +214,14 @@ if __name__ == '__main__':
     else:
         fasta = '/mnt/g/data/uniprot/uniprot_sprot_human_rename.fasta.gz'
         index = '/mnt/g/data/uniprot/uniprot_bwt_index.h5'
-
+    
     B = BwtProtein()
+    
+    # build index once for all
     # B.build_index(fasta, index)
+    
+    # load index and map peptide
     B.load_index(index)
     print B.map_peptide('AERYDDMAA')
+    print B.map_peptide('ILVEYUDNG')
 
