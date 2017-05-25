@@ -218,7 +218,7 @@ if __name__ == '__main__':
     B = BwtProtein()
     
     # build index once for all
-    # B.build_index(fasta, index)
+    B.build_index(fasta, index)
     
     # load index and map peptide
     B.load_index(index)
